@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Page</title>
+</head>
+<body>
+  <script>
+    // если uid всё ещё нужен — просто устанавливаем
+    sessionStorage.setItem('uid', '1');
+
+    const frame = document.createElement('iframe');
+    frame.src = 'frame.html?' + Math.random();
+    frame.style.width = '1px';
+    frame.style.opacity = '0.01'
+    frame.style.position = 'absolute';
+    frame.style.left = '-9999px';
+    frame.style.height = '1px';
+    frame.style.border = 'none';
+
+    document.body.appendChild(frame);
+  </script>
+</body>
+</html>
